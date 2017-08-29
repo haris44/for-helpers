@@ -8,10 +8,10 @@ object main {
 
   import helpers.implicitConversion._
 
-  def ret(): Future[String] = {
+  def ret(): Future[Int] = {
     (for {
-      data <- optionOne or ((err : String) =>  err + " ouaf")
-      res <- optionTwo(data) or (_ => " graour")
+      data <- optionOne or ((err : String) =>  1)
+      res <- optionTwo(data) or (_ => 3)
     } yield res).merge
   }
 
@@ -28,9 +28,9 @@ object main {
     //Future { Left("cats love")}
   }
 
-  def optionTwo(test: String): Future[Option[String]] = {
+  def optionTwo(test: String): Future[Option[Int]] = {
     Future {
-      Some(test + " miaww")
+      Some(31)
     }
   }
 }
