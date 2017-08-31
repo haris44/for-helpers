@@ -10,6 +10,8 @@ scalaVersion := "2.12.2"
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.0" % Test
 
+libraryDependencies += "org.typelevel" %% "cats-core" % "1.0.0-MF"
+
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "io.hidenn.controllers._"
 
